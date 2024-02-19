@@ -38,15 +38,15 @@ const ProductCategory = () => {
                                         mb-sm-0 main-col" key={category?.id}
                                 >
                                     <div className="card mb-3 main-card">
-                                        <Link to={`/medicines/${category?.slug}/?id=${category?.id}`}
+                                        <Link to={`/bhargava/medicines/${category?.slug}/?id=${category?.id}`}
                                             className="nav-link"
                                         >
-                                            <img src={category?.image?.src || '../assests/placeholder.jpg'}
+                                            <img src={category?.image?.src ||  `${process.env.REACT_APP_API_KEY}assests/placeholder.jpg` }
                                                 className='card-img card-img-top' alt={category?.name}
                                             />
                                         </Link>
                                     </div>
-                                    <Link to={`/medicines/${category?.slug}/?id=${category?.id}`}
+                                   <Link to={`/bhargava/medicines/${category?.slug}/?id=${category?.id}`}
                                         className="nav-link product-category"
                                     >
                                         <h4 className='mb-3 text-center'>

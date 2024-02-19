@@ -30,7 +30,7 @@ const Carousel = () => {
             {mobileSlider?.map((slider) => (
                 <div className="carousel-inner" key={slider?.id}>
                     <div className="carousel-item active" data-bs-interval="10000">
-                        <img src="../assests/slide-1.jpg" alt="slide-1.jpg"
+                        <img src={`${process.env.REACT_APP_API_KEY}assests/slide-1.jpg`} alt="slide-1.jpg"
                             className="d-block carsoul-image"
                         />
                         <div className="carousel-caption d-none d-md-block">
@@ -43,7 +43,7 @@ const Carousel = () => {
                                     <div className="d-flex align-items-center">
                                         <div className="or_circle">or</div>
                                         <div className="red mx-3">
-                                            <img src="../assests/arrow-black.png"
+                                            <img src={`${process.env.REACT_APP_API_KEY}assests/arrow-black.png`}
                                                 alt="arrow" width={'70px'}
                                             />
                                         </div>

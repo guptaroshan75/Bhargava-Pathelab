@@ -23,7 +23,7 @@ const Medicines = () => {
                         </div>
                         <nav className='nav-link' aria-label="breadcrumb">
                             <ul className="breadcrumb text-center nav-medicin">
-                                <Link className='nav-link breadcrumb-item text-white' to={'/home'}>
+                               <Link className='nav-link breadcrumb-item text-white' to={'/bhargava'}>
                                     Home
                                 </Link>
                                 <p className="nav-link breadcrumb-item text-white"> Medicines </p>
@@ -59,15 +59,15 @@ const Medicines = () => {
                                         mb-sm-0 main-col" key={category?.id}
                                     >
                                         <div className="card mb-3 main-card">
-                                            <Link to={`/medicines/${category?.slug}/?id=${category?.id}`}
+                                           <Link to={`/bhargava/medicines/${category?.slug}/?id=${category?.id}`}
                                                 className="nav-link"
                                             >
-                                                <img src={category?.image?.src || '../assests/placeholder.jpg'}
+                                                <img src={category?.image?.src || `${process.env.REACT_APP_API_KEY}assests/placeholder.jpg` }
                                                     className='card-img card-img-top' alt={category?.name}
                                                 />
                                             </Link>
                                         </div>
-                                        <Link to={`/medicines/${category?.slug}/?id=${category?.id}`}
+                                        <Link to={`/bhargava/medicines/${category?.slug}/?id=${category?.id}`}
                                             className="nav-link product-category"
                                         >
                                             <h4 className='mb-3 text-center'>

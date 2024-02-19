@@ -39,7 +39,7 @@ const AboutPage = () => {
                         <div className="card card-gallery pt-4 shadow">
                             <div className='card-body text-card-inner'>
                                 <Link className="nav-link">
-                                    <img src='../assests/oru-vision.jpg'
+                                    <img src={`${process.env.REACT_APP_API_KEY}assests/oru-vision.jpg`} 
                                         className='card-img-gallery'
                                         alt='oru-vision.jpg'
                                     />
@@ -61,7 +61,7 @@ const AboutPage = () => {
                         <div className="card card-gallery pt-4 shadow">
                             <div className='card-body text-card-inner'>
                                 <Link className="nav-link">
-                                    <img src='http://localhost/bhargava/wp-content/uploads/2023/09/our-mission.webp'
+                                    <img src={`${process.env.REACT_APP_API_KEY}backend/wp-content/uploads/2023/09/our-mission.webp`}
                                         className='card-img-gallery'
                                         alt='our-mission.webp'
                                     />

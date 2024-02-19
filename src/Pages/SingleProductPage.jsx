@@ -31,15 +31,15 @@ const SingleProductPage = () => {
             <section className='container p-0 mt-5'>
                 <nav aria-label="breadcrumb">
                     <ul className="breadcrumb product-menu">
-                        <Link className="breadcrumb-item nav-link nav-color" to={'/home'}> Home </Link>
+                        <Link className="breadcrumb-item nav-link nav-color" to={'/bhargava'}> Home </Link>
                         {specificProduct?.categories.map((category) => (
                             <Link className="breadcrumb-item nav-link nav-color" key={category?.id}
-                                to={`/medicines/${category?.slug}/?id=${category?.id}`}
+                                to={`/bhargava/medicines/${category?.slug}/?id=${category?.id}`}
                             >
                                 {category?.name}
                             </Link>
                         ))}
-                        <Link className="breadcrumb-item nav-link"> {specificProduct?.name} </Link>
+                        <div className="breadcrumb-item nav-link"> {specificProduct?.name} </div>
                     </ul>
                 </nav>
             </section>
@@ -51,7 +51,7 @@ const SingleProductPage = () => {
                             {specificProduct?.images.map((img) => (
                                 <div key={img?.id}>
                                     <Link className='nav-link'
-                                        to={`/medicine-image/${specificProduct?.slug}/?id=${specificProduct?.id}`}
+                                        to={`/bhargava/medicine-image/${specificProduct?.slug}/?id=${specificProduct?.id}`}
                                     >
                                         <GrSearch className='search-icon' />
                                     </Link>
@@ -98,7 +98,7 @@ const SingleProductPage = () => {
                                 <p className=''> Category : </p>
                                 {specificProduct?.categories.map((category) => (
                                     <Link className='nav-link' key={category?.id}
-                                        to={`/medicines/${category?.slug}/?id=${category?.id}`}
+                                        to={`/bhargava/medicines/${category?.slug}/?id=${category?.id}`}
                                     >
                                         <span style={{ color: '#649348' }}> {category?.name} </span>
                                     </Link>

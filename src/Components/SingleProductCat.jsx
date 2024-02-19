@@ -39,7 +39,7 @@ const SingleProductCat = () => {
                         </div>
                         <nav className='nav-link' aria-label="breadcrumb">
                             <ul className="breadcrumb text-center nav-medicin">
-                                <Link className='nav-link breadcrumb-item text-white' to={'/home'}>
+                                <Link className='nav-link breadcrumb-item text-white' to={'/bhargava'}>
                                     Home
                                 </Link>
                                 <p className="nav-link breadcrumb-item text-white">
@@ -61,7 +61,7 @@ const SingleProductCat = () => {
                         <div className="product-menu mt-3">
                             {categories.map((category) => (
                                 <div className='category-menu' key={category?.id}>
-                                    <Link to={`/medicines/${category?.slug}/?id=${category?.id}`}
+                                    <Link to={`/bhargava/medicines/${category?.slug}/?id=${category?.id}`}
                                         className="nav-link"
                                     >
                                         {category?.name}
@@ -96,11 +96,11 @@ const SingleProductCat = () => {
                                         key={specificCatProduct?.id}
                                     >
                                         <Link className='nav-link'
-                                            to={`/medicine/${specificCatProduct?.slug}/?id=${specificCatProduct?.id}`}
+                                            to={`/bhargava/medicine/${specificCatProduct?.slug}/?id=${specificCatProduct?.id}`}
                                         >
                                             <div className="card card-single-product">
                                                 {specificCatProduct?.images.map((img) => (
-                                                    <img src={img?.src || '../assests/woocommerce-product-placeholder.png'}
+                                                    <img src={img?.src || `${process.env.REACT_APP_API_KEY}assests/woocommerce-product-placeholder.png`}
                                                         key={img?.id} alt={img?.name}
                                                     />
                                                 ))}
@@ -109,7 +109,7 @@ const SingleProductCat = () => {
                                                 </div>
                                             </div>
                                         </Link>
-                                        <Link to={`/medicine/${specificCatProduct?.slug}/?id=${specificCatProduct?.id}`}
+                                        <Link to={`/bhargava/medicine/${specificCatProduct?.slug}/?id=${specificCatProduct?.id}`}
                                             className='nav-link'
                                         >
                                             <h2 className='product-title'> {specificCatProduct?.name} </h2>

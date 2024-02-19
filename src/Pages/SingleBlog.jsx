@@ -7,6 +7,7 @@ import { getSpecificBlogCat } from '../redux/features/blog_Category_Slice';
 const SingleBlog = () => {
     const { search } = useLocation();
     const id = new URLSearchParams(search).get('id')
+    console.log(id);
 
     const dispatch = useDispatch();
     const { blogs } = useSelector(state => state.posts);
@@ -40,7 +41,7 @@ const SingleBlog = () => {
                                 <p> by </p>
                                 <span className='ms-2 nav-link breadcrumb-item menu-content'>
                                     <Link className='nav-link'
-                                        to={`/author/${singleBlog?.yoast_head_json?.author.toLowerCase()}`}
+                                        to={`/bhargava/author/${singleBlog?.yoast_head_json?.author.toLowerCase()}`}
                                     >
                                         {singleBlog?.yoast_head_json?.author}
                                     </Link>
@@ -58,7 +59,7 @@ const SingleBlog = () => {
 
                                 <span className="nav-link breadcrumb-item menu-content">
                                     <Link className='nav-link d-flex align-items-center'
-                                        to={`/category/${blogcategory?.slug}/?id=${singleBlog?.id}`}
+                                        to={`/bhargava/category/${blogcategory?.slug}/?id=${singleBlog?.id}`}
                                     >
                                         {blogcategory?.name}
                                     </Link>
@@ -121,7 +122,7 @@ const SingleBlog = () => {
                             <div className='blog-post-link'>
                                 {blogs.map((blog) => (
                                     <Link className='nav-link' key={blog?.id}
-                                        to={`/${blog?.slug}/?id=${blog?.id}`}
+                                        to={`/bhargava/${blog?.slug}/?id=${blog?.id}`}
                                     >
                                         <p>  {blog?.title?.rendered} </p>
                                     </Link>

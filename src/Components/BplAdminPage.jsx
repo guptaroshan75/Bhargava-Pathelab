@@ -27,7 +27,7 @@ const BplAdminPage = () => {
                         {blogs.map((blog) => (
                             <div className="col-sm-12 col-lg-12 col-md-12 col-12 pb-5" key={blog?.id}>
                                 <Link className='nav-link'
-                                    to={`/${blog?.slug}/?id=${blog?.id}`}
+                                    to={`/bhargava/${blog?.slug}/?id=${blog?.id}`}
                                 >
                                     {blog?.yoast_head_json?.og_image.map((img) => (
                                         <img src={img?.url} className='w-100' key={img} alt={img?.type} />
@@ -44,7 +44,7 @@ const BplAdminPage = () => {
                                     <ul className="breadcrumb text-center blog-menu">
                                         <p> by </p>
                                         <Link className='nav-link breadcrumb-item'
-                                            to={`/author/${blog?.yoast_head_json?.author.toLowerCase()}`}
+                                            to={`/bhargava/author/${blog?.yoast_head_json?.author.toLowerCase()}`}
                                         >
                                             <span className='ms-2 menu-content-bpl'>
                                                 {blog?.yoast_head_json?.author}
@@ -64,7 +64,7 @@ const BplAdminPage = () => {
                                         <span className="nav-link breadcrumb-item menu-bpl-content">
                                             {getCategoryNames(blog?.categories).map((category, index) => (
                                                 <Link className='nav-link d-flex align-items-center'
-                                                    to={`/category/${category.replace(/\s+/g, '-')}/?id=${blog?.id}`}
+                                                    to={`/bhargava/category/${category.replace(/\s+/g, '-')}/?id=${blog?.id}`}
                                                 >
                                                     {category}
                                                 </Link>
@@ -101,7 +101,7 @@ const BplAdminPage = () => {
                             <div className='blog-post-link'>
                                 {blogs.map((blog) => (
                                     <Link className='nav-link' key={blog?.id}
-                                        to={`/${blog?.slug}/?id=${blog?.id}`}
+                                        to={`/bhargava/${blog?.slug}/?id=${blog?.id}`}
                                     >
                                         <p>  {blog?.title?.rendered} </p>
                                     </Link>

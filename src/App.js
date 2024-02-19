@@ -21,6 +21,7 @@ import SingleBlog from './Pages/SingleBlog';
 import SingleCatBlog from './Pages/SingleCatBlog';
 import BplAdminPage from './Components/BplAdminPage';
 import SingleProductCat from './Components/SingleProductCat';
+import PageNotFound from './Pages/PageNotFound';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -30,32 +31,33 @@ const App = () => {
     dispatch(getAllMenu())
     window.scrollTo(0, 0);
   }, [dispatch])
+
   return (
     <>
       <Navbar />
       <ToastContainer />
       <Routes>
-        <Route path='/' element={<Navigate to='/home' />} />
-        <Route path='/home' element={<HomePage />} />
-        <Route path='/medicines' element={<Medicines />} />
-        <Route path='/generics' element={<Generics />} />
-        <Route path='/blogs' element={<Blogs />} />
-        <Route path='/contact-us' element={<ContactUs />} />
+        <Route path='/bhargava' element={<HomePage />} />
+        <Route path='/bhargava/medicines' element={<Medicines />} />
+        <Route path='/bhargava/generics' element={<Generics />} />
+        <Route path='/bhargava/blogs' element={<Blogs />} />
+        <Route path='/bhargava/contact-us' element={<ContactUs />} />
         {menus.map(item => (item.title.toLowerCase() === 'medicines' ? (
-          <Route path={'/medicines/:id'} key={item?.ID} element={<SingleProductCat />} />
+          <Route path={'/bhargava/medicines/:id'} key={item?.ID} element={<SingleProductCat />} />
         ) : (menus.map(subItem => (
           subItem.menu_item_parent === item.post_name && subItem.menu_item_parent !== 'medicines' && (
-            <Route path={`/${item.title.toLowerCase().replace(/\s+/g, '-')}/:name`}
+            <Route path={`/bhargava/${item.title.toLowerCase().replace(/\s+/g, '-')}/:name`}
               element={<SingleHomePage />} key={subItem.ID}
             />
           )
         )))
         ))}
-        <Route path={'/medicine/:id'} element={<SingleProductPage />} />
-        <Route path={'/medicine-image/:name'} element={<SingleImagePage />} />
-        <Route path={'/:name'} element={<SingleBlog />} />
-        <Route path={'/category/:name'} element={<SingleCatBlog />} />
-        <Route path={'/author/:name'} element={<BplAdminPage />} />
+        <Route path={'/bhargava/medicine/:id'} element={<SingleProductPage />} />
+        <Route path={'/bhargava/medicine-image/:name'} element={<SingleImagePage />} />
+        <Route path={'/bhargava/:name'} element={<SingleBlog />} />
+        <Route path={'/bhargava/category/:name'} element={<SingleCatBlog />} />
+        <Route path={'/bhargava/author/:name'} element={<BplAdminPage />} />
+        {/* <Route path='*' element={<PageNotFound />} /> */}
       </Routes>
       <Footer />
     </>

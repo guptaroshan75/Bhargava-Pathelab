@@ -32,7 +32,7 @@ const SingleCatBlog = () => {
                 <div className="row">
                     <div className="col-sm-12 col-lg-9 col-md-7 col-12 pb-5">
                         <Link className='nav-link'
-                            to={`/${singleBlog?.slug}/?id=${singleBlog?.id}`}
+                            to={`/bhargava/${singleBlog?.slug}/?id=${singleBlog?.id}`}
                         >
                             {singleBlog?.yoast_head_json?.og_image.map((img) => (
                                 <img src={img?.url} className='w-100 img-cat' alt={img?.type} key={img} />
@@ -49,7 +49,7 @@ const SingleCatBlog = () => {
                             <ul className="breadcrumb text-center blog-menu">
                                 <p> by </p>
                                 <Link className='nav-link breadcrumb-item'
-                                    to={`/author/${singleBlog?.yoast_head_json?.author.toLowerCase()}`}
+                                    to={`/bhargava/author/${singleBlog?.yoast_head_json?.author.toLowerCase()}`}
                                 >
                                     <span className='ms-2 menu-content'>
                                         {singleBlog?.yoast_head_json?.author}
@@ -69,7 +69,7 @@ const SingleCatBlog = () => {
 
                                 <span className="nav-link breadcrumb-item menu-content">
                                     <Link className='nav-link d-flex align-items-center'
-                                        to={`/category/${blogcategory?.slug}/?id=${singleBlog?.id}`}
+                                        to={`/bhargava/category/${blogcategory?.slug}/?id=${singleBlog?.id}`}
                                     >
                                         {blogcategory?.name}
                                     </Link>
@@ -103,7 +103,7 @@ const SingleCatBlog = () => {
                             <div className='blog-post-link'>
                                 {blogs.map((blog) => (
                                     <Link className='nav-link' key={blog?.id}
-                                        to={`/${blog?.slug}/?id=${blog?.id}`}
+                                        to={`/bhargava/${blog?.slug}/?id=${blog?.id}`}
                                     >
                                         <p>  {blog?.title?.rendered} </p>
                                     </Link>

@@ -26,8 +26,8 @@ const Footer = () => {
                 <section className='container pt-5 pb-5 p-0'>
                     <div className='row'>
                         <div className=' col-lg-4 col-md-6 col-sm-12 col-12'>
-                            <img src='../../assests/logo.png' alt='logo.png'
-                                className='footer-logo'
+                            <img src={`${process.env.REACT_APP_API_KEY}assests/logo.png`}
+                                alt='logo.png' className='footer-logo'
                             />
 
                             <div className='footer-content mt-4'>
@@ -40,21 +40,21 @@ const Footer = () => {
                                 <Link to={'https://m.facebook.com/bhargavaphytolab/'}
                                     target="_blank"
                                 >
-                                    <img src="http://teamwebdevelopers.com/bhargava/backend/wp-content/uploads/2023/09/facebook.gif"
+                                    <img src={`${process.env.REACT_APP_API_KEY}backend/wp-content/uploads/2023/09/facebook.gif`}
                                         alt="FaceBook-gif" className='social-icon'
                                     />
                                 </Link>
                                 <Link to={'https://www.linkedin.com/company/bhargava-phytolab-pvt-ltd-'}
                                     target="_blank"
                                 >
-                                    <img src="http://teamwebdevelopers.com/bhargava/backend/wp-content/uploads/2023/09/linkedin.gif"
+                                    <img src={`${process.env.REACT_APP_API_KEY}backend/wp-content/uploads/2023/09/linkedin.gif`}
                                         alt="Linkdin-gif" className='social-icon'
                                     />
                                 </Link>
                                 <Link to={'https://www.youtube.com/c/BhargavaPhytolab'}
                                     target="_blank"
                                 >
-                                    <img src="http://teamwebdevelopers.com/bhargava/backend/wp-content/uploads/2023/09/youtube.gif"
+                                    <img src={`${process.env.REACT_APP_API_KEY}backend/wp-content/uploads/2023/09/youtube.gif`}
                                         alt="Youtube-gif" className='social-icon'
                                     />
                                 </Link>
@@ -76,9 +76,9 @@ const Footer = () => {
                                         <div className='nav-menu mt-4'>
                                             {footerMenuTitle[index]?.slug === 'medicines' ? (
                                                 menuItems.map((menuItem) => (
-                                                    <NavLink className='nav-link d-flex align-items-center'
+                                                        <NavLink className='nav-link d-flex align-items-center'
                                                         key={menuItem?.id} style={{ color: '#656565' }}
-                                                        to={`/medicines/${sanitizeTitle(menuItem.title).toLowerCase().replace(/\s+/g, '-').trim()}/?id=${menuItem?.object_id}`}
+                                                        to={`/bhargava/medicines/${sanitizeTitle(menuItem.title).toLowerCase().replace(/\s+/g, '-').trim()}/?id=${menuItem?.object_id}`}
                                                     >
                                                         <BsArrowRight className='icon-footer me-2' />
                                                         <div dangerouslySetInnerHTML={{
@@ -95,7 +95,7 @@ const Footer = () => {
                                                                 <NavLink
                                                                     className='nav-link d-flex align-items-center'
                                                                     style={{ color: '#656565' }}
-                                                                    to={`/blogs`}
+                                                                    to={`/bhargava/blogs`}
                                                                 >
                                                                     <BsArrowRight className='icon-footer me-2' />
                                                                     <div dangerouslySetInnerHTML={{
@@ -106,7 +106,7 @@ const Footer = () => {
                                                                 <NavLink
                                                                     className='nav-link d-flex align-items-center'
                                                                     style={{ color: '#656565' }}
-                                                                    to={`/home/${sanitizeTitle(menuItem.title)
+                                                                    to={`/bhargava/home/${sanitizeTitle(menuItem.title)
                                                                         .toLowerCase()
                                                                         .replace(/\s+/g, '-')
                                                                         .trim()}/?id=${menuItem?.object_id}`}
@@ -141,7 +141,7 @@ const Footer = () => {
                 </p>
                 <Link to={'https://www.betasofttechnology.com/'} target="_blank">
                     <span className='circle-anim mx-3'>
-                        <img src='../../assests/beta-soft-technology.png'
+                        <img src={`${process.env.REACT_APP_API_KEY}assests/beta-soft-technology.png`}
                             alt='beta-soft-technology'
                         />
                     </span>

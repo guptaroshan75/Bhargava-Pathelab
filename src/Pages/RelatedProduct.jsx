@@ -26,7 +26,7 @@ const RelatedProduct = ({ ids }) => {
                             {relatedProduct?.images.map((img) => (
                                 <div key={img?.id}>
                                     <Link className='nav-link'
-                                        to={`/medicine/${relatedProduct?.slug}/?id=${relatedProduct?.id}`}
+                                        to={`/bhargava/medicine/${relatedProduct?.slug}/?id=${relatedProduct?.id}`}
                                     >
                                         <div className="card related-card-product">
                                             <img src={img?.src || '../assests/placeholder.jpg'}
@@ -38,7 +38,7 @@ const RelatedProduct = ({ ids }) => {
                                         </div>
                                     </Link>
                                     <Link className='nav-link'
-                                        to={`/medicine/${relatedProduct?.slug}/?id=${relatedProduct?.id}`}
+                                        to={`/bhargava/medicine/${relatedProduct?.slug}/?id=${relatedProduct?.id}`}
                                     >
                                         <h2 className='product-title'> {relatedProduct.name} </h2>
                                     </Link>

@@ -9,7 +9,6 @@ const SingleHomePage = () => {
 
     const dispatch = useDispatch();
     const { singlePages } = useSelector(state => state.pages);
-    console.log(singlePages);
 
     useEffect(() => {
         dispatch(getSpecificSinglePage(id))

@@ -143,7 +143,7 @@ const Testimonials = () => {
                                     </Link>
                                     <div className='d-flex align-items-center'>
                                         <div className='avatar'>
-                                            <img src="http://localhost/bhargava/wp-content/uploads/2023/09/dummy.jpg"
+                                            <img src={`${process.env.REACT_APP_API_KEY}backend/wp-content/uploads/2023/09/dummy.jpg`}
                                                 className="rounded-circle" alt="Avatar"
                                             />
                                         </div>

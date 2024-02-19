@@ -57,7 +57,7 @@ const Blogs = () => {
                         {blogs.map((blog) => (
                             <SwiperSlide key={blog?.id}>
                                 <Link className='nav-link mt-3 card border-0'
-                                    to={`/${blog?.slug}/?id=${blog?.id}`}
+                                    to={`/bhargava/${blog?.slug}/?id=${blog?.id}`}
                                 >
                                     <img src={blog?.yoast_head_json?.og_image[0].url}
                                         className="card-img-top rounded" alt={blog?.yoast_head_json?.title}
