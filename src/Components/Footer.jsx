@@ -13,7 +13,7 @@ const Footer = () => {
     useEffect(() => {
         dispatch(getAllFooterMenuTitle(ids))
         dispatch(getAllFooterMenu(ids))
-    }, [dispatch]);
+    }, [dispatch, ids]);
 
     const sanitizeTitle = (title) => {
         const parser = new DOMParser();
@@ -76,7 +76,7 @@ const Footer = () => {
                                         <div className='nav-menu mt-4'>
                                             {footerMenuTitle[index]?.slug === 'medicines' ? (
                                                 menuItems.map((menuItem) => (
-                                                        <NavLink className='nav-link d-flex align-items-center'
+                                                    <NavLink className='nav-link d-flex align-items-center'
                                                         key={menuItem?.id} style={{ color: '#656565' }}
                                                         to={`/bhargava/medicines/${sanitizeTitle(menuItem.title).toLowerCase().replace(/\s+/g, '-').trim()}/?id=${menuItem?.object_id}`}
                                                     >
