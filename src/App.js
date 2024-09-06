@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './Components/Navbar';
 import HomePage from './Pages/HomePage';
 import Footer from './Components/Footer';
@@ -16,12 +16,10 @@ import SingleHomePage from './Pages/SingleHomePage';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllMenu } from './redux/features/nav_Slice';
 import SingleProductPage from './Pages/SingleProductPage';
-import SingleImagePage from './Pages/SingleImagePage';
 import SingleBlog from './Pages/SingleBlog';
 import SingleCatBlog from './Pages/SingleCatBlog';
 import BplAdminPage from './Components/BplAdminPage';
 import SingleProductCat from './Components/SingleProductCat';
-import PageNotFound from './Pages/PageNotFound';
 
 const App = () => {
   const dispatch = useDispatch();
@@ -53,7 +51,6 @@ const App = () => {
         )))
         ))}
         <Route path={'/bhargava/medicine/:id'} element={<SingleProductPage />} />
-        <Route path={'/bhargava/medicine-image/:name'} element={<SingleImagePage />} />
         <Route path={'/bhargava/:name'} element={<SingleBlog />} />
         <Route path={'/bhargava/category/:name'} element={<SingleCatBlog />} />
         <Route path={'/bhargava/author/:name'} element={<BplAdminPage />} />

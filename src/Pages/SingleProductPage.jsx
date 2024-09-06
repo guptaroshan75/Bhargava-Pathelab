@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import ReactStars from "react-rating-stars-component";
 import { Link, useLocation } from 'react-router-dom';
-import { GrSearch } from 'react-icons/gr';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import { BsEnvelope } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
@@ -49,11 +48,6 @@ const SingleProductPage = () => {
                         <div className="card single-product-card">
                             {specificProduct?.images.map((img) => (
                                 <div key={img?.id}>
-                                    {/* <Link className='nav-link'
-                                        to={`/bhargava/medicine-image/${specificProduct?.slug}/?id=${specificProduct?.id}`}
-                                    >
-                                        <GrSearch className='search-icon' />
-                                    </Link> */}
                                     <img src={img?.src || '../assests/placeholder.jpg'} alt={img?.name}
                                         style={{ width: '330px', margin: '0 auto' }}
                                     />
