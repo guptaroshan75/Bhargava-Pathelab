@@ -21,8 +21,8 @@ const Carousel = () => {
                                 <h4>A Family Health Solution For</h4>
                                 <h2><span style={{ color: "#649348" }}>Sugar Management</span></h2>
                                 <div class="flex-btn">
-                                    <a href="#">View Products</a>
-                                    <a href="#">Contact Us</a>
+                                    <span>View Products</span>
+                                    <span>Contact Us</span>
                                 </div>
 
                                 <div className="d-flex align-items-center">

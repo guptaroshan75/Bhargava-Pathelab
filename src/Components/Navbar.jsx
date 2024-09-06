@@ -162,14 +162,13 @@ const Navbar = () => {
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation"
                 >
-                    {/* <span class="navbar-toggler-icon"></span> */}
                     <RiMenu2Fill size={25} />
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <div className="navbar-collapse" id="navbarSupportedContent">
                         <ul className="navbar-nav me-auto mb-lg-0 gap-lg-2 gap-md-1 mt-lg-0 mt-md-0 mt-4">
-                            {menus.map(item => {
+                            {menus?.map(item => {
                                 if (item.menu_item_parent === '0') {
                                     if (item.title.toLowerCase() === 'home') {
                                         return (

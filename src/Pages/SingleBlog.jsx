@@ -25,7 +25,7 @@ const SingleBlog = () => {
                 }
             });
         }
-    }, [dispatch, id, category]);
+    }, [dispatch, id, category, singleBlog?.categories]);
 
     return (
         <section>

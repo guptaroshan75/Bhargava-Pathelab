@@ -24,7 +24,7 @@ const SingleCatBlog = () => {
                 }
             });
         }
-    }, [dispatch, id, category]);
+    }, [dispatch, id, category, singleBlog?.categories]);
 
     return (
         <section>

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import timeline from '../js/timeline.min.js';
-import '../css/timeline.css';
+import '../css/timeline.css'
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllHistory } from '../redux/features/history_Time_Slice.js';
 
