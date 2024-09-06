@@ -4,7 +4,6 @@ import ProductCategorySlice from "./features/product_Cat_Slice";
 import KeyStrengthSlice from "./features/key_Strength_Slice";
 import TestimonialsSlice from "./features/testimonials_Slice";
 import BlogSlice from "./features/blog_Slice";
-import CarouselSlice from "./features/card_Carousel_Slice";
 import BlogCategorySlice from "./features/blog_Category_Slice";
 import SingleHomePageSlice  from "./features/single_HomePage_Slice";
 import FooterSlice  from "./features/footer_Slice";
@@ -15,7 +14,6 @@ import MediaSlice from "./features/media_Slice";
 const Store = configureStore({
     reducer: {
         navMenus: NavMenuSlice,
-        sliders: CarouselSlice,
         category: ProductCategorySlice,
         strength: KeyStrengthSlice,
         testimonials: TestimonialsSlice,

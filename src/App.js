@@ -57,7 +57,6 @@ const App = () => {
         <Route path={'/bhargava/:name'} element={<SingleBlog />} />
         <Route path={'/bhargava/category/:name'} element={<SingleCatBlog />} />
         <Route path={'/bhargava/author/:name'} element={<BplAdminPage />} />
-        {/* <Route path='*' element={<PageNotFound />} /> */}
       </Routes>
       <Footer />
     </>
