@@ -49,11 +49,11 @@ const SingleProductPage = () => {
                         <div className="card single-product-card">
                             {specificProduct?.images.map((img) => (
                                 <div key={img?.id}>
-                                    <Link className='nav-link'
+                                    {/* <Link className='nav-link'
                                         to={`/bhargava/medicine-image/${specificProduct?.slug}/?id=${specificProduct?.id}`}
                                     >
                                         <GrSearch className='search-icon' />
-                                    </Link>
+                                    </Link> */}
                                     <img src={img?.src || '../assests/placeholder.jpg'} alt={img?.name}
                                         style={{ width: '330px', margin: '0 auto' }}
                                     />

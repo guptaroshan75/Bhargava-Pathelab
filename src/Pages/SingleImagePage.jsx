@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import Lightbox from "react-awesome-lightbox";
-import "react-awesome-lightbox/build/style.css";
+// import Lightbox from "react-awesome-lightbox";
+// import "react-awesome-lightbox/build/style.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { useLocation } from 'react-router-dom';
 import { getSpecificProduct } from '../redux/features/product_Cat_Slice';
@@ -22,9 +22,9 @@ const SingleImagePage = () => {
         <>
             {specificProduct?.images.map((img) => (
                 <div className='show-img' key={img?.id}>
-                    <Lightbox image={img?.src}
+                    {/* <Lightbox image={img?.src}
                         title={img?.name}
-                    />
+                    /> */}
                     <p> {img?.name} </p>
                 </div>
             ))}

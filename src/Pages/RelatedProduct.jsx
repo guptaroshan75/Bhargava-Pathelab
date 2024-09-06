@@ -19,34 +19,32 @@ const RelatedProduct = ({ ids }) => {
                 <h2> Related Products </h2>
             </div>
 
-            <div className='row mt-5'>
-                <div className='d-flex single-product-menu'>
-                    {relatedIdProducts?.map((relatedProduct) => (
-                        <div className='col-lg-3 col-md-6 col-sm-12 col-12 mb-4' key={relatedProduct?.id}>
-                            {relatedProduct?.images.map((img) => (
-                                <div key={img?.id}>
-                                    <Link className='nav-link'
-                                        to={`/bhargava/medicine/${relatedProduct?.slug}/?id=${relatedProduct?.id}`}
-                                    >
-                                        <div className="card related-card-product">
-                                            <img src={img?.src || '../assests/placeholder.jpg'}
-                                                key={img?.id} alt={img?.name}
-                                            />
-                                            <div className='product-single-link'>
-                                                <AiFillPlusCircle className='fs-1 me-1' />
-                                            </div>
+            <div className='row mt-5 single-product-menu'>
+                {relatedIdProducts?.map((relatedProduct) => (
+                    <div className='col-lg-3 col-md-6 col-sm-12 col-12 mb-4' key={relatedProduct?.id}>
+                        {relatedProduct?.images.map((img) => (
+                            <div key={img?.id}>
+                                <Link className='nav-link'
+                                    to={`/bhargava/medicine/${relatedProduct?.slug}/?id=${relatedProduct?.id}`}
+                                >
+                                    <div className="card related-card-product">
+                                        <img src={img?.src || '../assests/placeholder.jpg'}
+                                            key={img?.id} alt={img?.name}
+                                        />
+                                        <div className='product-single-link'>
+                                            <AiFillPlusCircle className='fs-1 me-1' />
                                         </div>
-                                    </Link>
-                                    <Link className='nav-link'
-                                        to={`/bhargava/medicine/${relatedProduct?.slug}/?id=${relatedProduct?.id}`}
-                                    >
-                                        <h2 className='product-title'> {relatedProduct.name} </h2>
-                                    </Link>
-                                </div>
-                            ))}
-                        </div>
-                    ))}
-                </div>
+                                    </div>
+                                </Link>
+                                <Link className='nav-link'
+                                    to={`/bhargava/medicine/${relatedProduct?.slug}/?id=${relatedProduct?.id}`}
+                                >
+                                    <h2 className='product-title'> {relatedProduct.name} </h2>
+                                </Link>
+                            </div>
+                        ))}
+                    </div>
+                ))}
             </div>
         </section >
     )
