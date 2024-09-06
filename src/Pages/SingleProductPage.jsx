@@ -4,7 +4,6 @@ import { Link, useLocation } from 'react-router-dom';
 import { GrSearch } from 'react-icons/gr';
 import { RiArrowRightSLine } from 'react-icons/ri';
 import { BsEnvelope } from 'react-icons/bs';
-import { SideBySideMagnifier } from "react-image-magnifiers";
 import { useDispatch, useSelector } from 'react-redux';
 import { getSpecificProduct } from '../redux/features/product_Cat_Slice';
 import RelatedProduct from './RelatedProduct';
@@ -27,7 +26,7 @@ const SingleProductPage = () => {
     return (
         <>
             <hr className='m-0' />
-            
+
             <section className='container p-0 mt-5'>
                 <nav aria-label="breadcrumb">
                     <ul className="breadcrumb product-menu">
@@ -55,12 +54,8 @@ const SingleProductPage = () => {
                                     >
                                         <GrSearch className='search-icon' />
                                     </Link>
-                                    <SideBySideMagnifier
-                                        fillAvailableSpace={false}
-                                        alwaysInPlace={true}
-                                        imageSrc={img?.src || '../assests/placeholder.jpg'}
+                                    <img src={img?.src || '../assests/placeholder.jpg'} alt={img?.name}
                                         style={{ width: '330px', margin: '0 auto' }}
-                                        imageAlt={img?.name}
                                     />
                                 </div>
                             ))}
